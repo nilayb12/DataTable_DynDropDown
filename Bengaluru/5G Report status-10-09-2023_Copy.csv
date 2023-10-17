@@ -1,4 +1,4 @@
-﻿Date ,Transmitted From RTU to FMS,(FMS)Transmitted to backup server,Total Report Requested Count,Reports Generated of same day ,"Reports generated for previous day, F= (G-E)",Total Report Issued Count,CLOT Reports Generated of previous day ,CLOT reports generated on same day,"Total Report Issued Count, J= (H+I)"
+Date ,Transmitted From RTU to FMS,(FMS)Transmitted to backup server,Total Report Requested Count,Reports Generated of same day ,"Reports generated for previous day, F= (G-E)",Total Report Issued Count,CLOT Reports Generated of previous day ,CLOT reports generated on same day,"Total Report Issued Count, J= (H+I)"
 02-01-2023,78536,76501,1410,,,1372,,,0
 03-01-2023,56374,54873,1626,,,1635,,,0
 04-01-2023,59339,58319,1505,,,1496,,,0
