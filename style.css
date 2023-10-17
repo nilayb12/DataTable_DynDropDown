@@ -1,0 +1,38 @@
+body {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+#selectFolder, #selectFile {
+  position: relative;
+  display: inline-flex;
+  width: auto;
+  text-overflow: '';
+  border-color: white;
+  outline-color: white;
+  font: inherit;
+  padding: 5px;
+  background: rgb(69, 0, 69);
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background .2s ease-in-out, border .2s ease-in-out, color .2s ease-in-out;
+  /* option {
+    color: inherit;
+  } */
+}
+
+#selectFolder:hover, #selectFile:hover {
+  background: rgb(0, 69, 0);
+}
+
+tfoot input {
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 4px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
