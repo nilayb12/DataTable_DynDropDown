@@ -27,17 +27,19 @@
 </head>
 
 <body>
-    <select id="selectFolder">
-        <option selected disabled>Select a Folder</option>
-        <option value="">Root</option>
-        <?php
-        $folders = glob("*", GLOB_ONLYDIR);
-        foreach ($folders as $folder) {
-            echo '<option value="' . $folder . '">' . $folder . '</option>';
-        }
-        ?>
-    </select>
-    <?php include('files.php'); ?>
+    <label id="selectContainer">
+        <select id="selectFolder">
+            <option selected disabled>Select a Folder</option>
+            <option value="">Root</option>
+            <?php
+            $folders = glob("*", GLOB_ONLYDIR);
+            foreach ($folders as $folder) {
+                echo '<option value="' . $folder . '">' . $folder . '</option>';
+            }
+            ?>
+        </select>
+        <?php include('files.php'); ?>
+    </label>
     <div id="csvTable"></div>
 
     <script src="viewTable.js"></script>
