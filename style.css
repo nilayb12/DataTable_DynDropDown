@@ -18,7 +18,7 @@ body {
   border-radius: 10px;
   border: 2px dashed #696969;
   color: green;
-  cursor: default;
+  cursor: pointer;
   transition: background .2s ease-in-out, border .2s ease-in-out, color .2s ease-in-out;
 }
 
@@ -42,7 +42,22 @@ body {
   } */
 }
 
-#selectFolder:hover, #selectFile:hover {
+/* #selectFolder:hover, #selectFile:hover {
+  background: rgb(0, 69, 0);
+} */
+
+#selectButton {
+  border: none;
+  background: blue;
+  padding: 8px 18px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+#selectButton:hover {
   background: rgb(0, 69, 0);
 }
 

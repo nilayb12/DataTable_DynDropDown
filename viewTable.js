@@ -4,22 +4,44 @@ html.classList.add(prefers);
 html.setAttribute('class', prefers);
 
 const folderSelected = document.getElementById('selectFolder');
-folderSelected.addEventListener("change", (ev) => {
-    $.ajax({
-        type: "POST",
-        url: "files.php",
-        data: {fold: ev.target.value},
-        success: function (data) {
-            $('#selectFile').html(data);
-        }
-    })
+['', 'change'].forEach(function (ev) {
+    folderSelected.addEventListener(ev, (ev) => {
+        $.ajax({
+            type: "POST",
+            url: "files.php",
+            data: {fold: ev.target.value},
+            success: function (data) {
+                $('#selectFile').html(data);
+            }
+        })
+    });
 });
 
 const csvFileSelected = document.getElementById('selectFile');
-csvFileSelected.addEventListener("change", (ev) => {
-    // location.href=event.target.value;
-    $.get(ev.target.value, function (data) {
+var fval = $('#selectFile').val();
+$.get(fval, function (data) {
+    if (fval.length > 0) {
         papaParse(data)
+    }
+});
+// ['change', 'mouseover'].forEach(function (ev) {
+//     csvFileSelected.addEventListener(ev, (ev) => {
+//         // location.href=event.target.value;
+//         var fval = ev.target.value;
+//         $.get(fval, function (data) {
+//             if (fval.length > 0) {
+//                 papaParse(data)
+//             }
+//         });
+//     });
+// });
+const buttonClicked = document.getElementById('selectButton');
+buttonClicked.addEventListener('click', () => {
+    var fval = csvFileSelected.value;
+    $.get(fval, function (data) {
+        if (fval.length > 0 && fval != 'Empty') {
+            papaParse(data)
+        }
     });
 });
 
