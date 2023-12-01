@@ -69,3 +69,25 @@ tfoot input {
   border-radius: 5px;
   box-sizing: border-box;
 }
+
+/* dataTables Search input box */
+.dataTables_filter {
+  position: relative;
+}
+
+.dataTables_filter input {
+  width: 100%;
+  /* height: 30px; */
+  background: #000000;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 3px #ffffff, 0 10px 15px #336633 inset;
+  text-indent: 5px;
+}
+
+.fa-icon {
+  color: white;
+  position: absolute;
+  top: 7px;
+  right: 0;
+}

@@ -110,6 +110,10 @@ function initDataTable() {
             initCollapsed: true,
             cascadePanes: true
         },
+        language: {
+            search: '',
+            searchPlaceholder: 'Enter Search Query'
+        },
         // responsive: true,
         deferRender: true,
         buttons: [
@@ -136,6 +140,8 @@ function initDataTable() {
                             }
                         });
                 });
+            $('#tableData_filter input')
+                .after('<span class="fa-icon"><i class="fa-solid fa-magnifying-glass"></i></span>');
         },
         columnDefs: [
             {
