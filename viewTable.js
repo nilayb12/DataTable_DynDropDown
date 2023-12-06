@@ -20,7 +20,7 @@ const folderSelected = document.getElementById('selectFolder');
 const csvFileSelected = document.getElementById('selectFile');
 var fval = $('#selectFile').val();
 $.get(fval, function (data) {
-    if (fval.length > 0) {
+    if (fval.length > 0 && fval != 'Empty') {
         papaParse(data)
     }
 });
@@ -121,6 +121,8 @@ function initDataTable() {
             {
                 extend: 'csv',
                 text: 'Download CSV',
+                title: csvFileSelected.value.substr(folderSelected.value.length,
+                    csvFileSelected.value.length - folderSelected.value.length - 4),
                 exportOptions: {
                     columns: ':visible'
                 }
