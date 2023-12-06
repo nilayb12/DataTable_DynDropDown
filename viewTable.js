@@ -117,12 +117,16 @@ function initDataTable() {
         // responsive: true,
         deferRender: true,
         buttons: [
-            'colvis',
+            {
+                extend: 'colvis',
+                // collectionTitle: 'Column Visibility Panel'
+            },
             {
                 extend: 'csv',
-                text: 'Download CSV',
+                text: '<i class="fa-solid fa-file-csv"></i>',
                 title: csvFileSelected.value.substr(folderSelected.value.length,
                     csvFileSelected.value.length - folderSelected.value.length - 4),
+                titleAttr: 'Download Data as CSV',
                 exportOptions: {
                     columns: ':visible'
                 }
@@ -143,7 +147,7 @@ function initDataTable() {
                         });
                 });
             $('#tableData_filter input')
-                .after('<span class="fa-icon"><i class="fa-solid fa-magnifying-glass"></i></span>');
+                .after('<span class="fa-icon" /><i class="fa-solid fa-magnifying-glass" />');
         },
         columnDefs: [
             {
