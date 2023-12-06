@@ -123,7 +123,7 @@ function initDataTable() {
             },
             {
                 extend: 'csv',
-                text: '<i class="fa-solid fa-file-csv"></i>',
+                text: '<i class="fa-solid fa-file-csv" />',
                 title: csvFileSelected.value.substr(folderSelected.value.length,
                     csvFileSelected.value.length - folderSelected.value.length - 4),
                 titleAttr: 'Download Data as CSV',
