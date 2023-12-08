@@ -32,7 +32,7 @@
 <body>
     <label id="selectContainer" for="selectFolder">
         <select id="selectFolder">
-            <option selected disabled>Select Location</option>
+            <option value="" selected>Index</option>
             <?php
             $folders = glob("Data/*", GLOB_ONLYDIR);
             foreach ($folders as $folder) {
