@@ -36,7 +36,7 @@
             <?php
             $folders = glob("Data/*", GLOB_ONLYDIR);
             foreach ($folders as $folder) {
-                echo '<option value="' . $folder . '">' . $folder . '</option>';
+                echo '<option value="' . $folder . '">' . substr($folder, 5) . '</option>';
             }
             ?>
         </select>
