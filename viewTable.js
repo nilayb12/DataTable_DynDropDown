@@ -102,6 +102,9 @@ function initDataTable() {
         scrollY: '75vh',
         scrollCollapse: true,
         dom: 'PlBfritp',
+        // dom: 'P'+
+        // '<"fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix ui-corner-tl ui-corner-tr"lBfr>'+'t'+
+        // '<"fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix ui-corner-bl ui-corner-br"ip>',
         processing: true,
         pagingType: "full_numbers",
         keys: true,
@@ -117,12 +120,16 @@ function initDataTable() {
         // responsive: true,
         deferRender: true,
         buttons: [
-            'colvis',
+            {
+                extend: 'colvis',
+                // collectionTitle: 'Column Visibility Panel'
+            },
             {
                 extend: 'csv',
-                text: 'Download CSV',
+                text: '<i class="fa-solid fa-file-csv fa-xl" />',
                 title: csvFileSelected.value.substr(folderSelected.value.length,
                     csvFileSelected.value.length - folderSelected.value.length - 4),
+                titleAttr: 'Download Data as CSV',
                 exportOptions: {
                     columns: ':visible'
                 }
@@ -143,7 +150,7 @@ function initDataTable() {
                         });
                 });
             $('#tableData_filter input')
-                .after('<span class="fa-icon"><i class="fa-solid fa-magnifying-glass"></i></span>');
+                .after('<span class="fa-icon" /><i class="fa-solid fa-magnifying-glass" />');
         },
         columnDefs: [
             {
