@@ -12,4 +12,5 @@ This is the Bootstrap version of this Project. Main Branch has been renamed to j
 Clone this Project and run index.php. You'll need to install a Server (like Xampp) or use VSCode (after installing PHP manually).
 
 ### Note:
-All projects are updated in sync with each other.
+- Theme depends on what your Device Theme is.
+- All projects are updated in sync with each other.
