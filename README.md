@@ -11,4 +11,5 @@ Made from [nilayb12/DataTable](https://github.com/nilayb12/DataTable) with a pro
 Clone this Project and run index.php. You'll need to install a Server (like Xampp) or use VSCode (after installing PHP manually).
 
 ### Note:
-Both projects are updated in sync with each other.
+- There are now 2 Versions of this Project, jQuery and Bootstrap. Change Branch to switch between them.
+- All projects are updated in sync with each other.
