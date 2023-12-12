@@ -1,8 +1,3 @@
-let prefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-let html = document.querySelector('html');
-html.classList.add(prefers);
-html.setAttribute('class', prefers);
-
 const folderSelected = document.getElementById('selectFolder');
 ['', 'change'].forEach(function (ev) {
     folderSelected.addEventListener(ev, (ev) => {
@@ -101,10 +96,9 @@ function initDataTable() {
         scrollX: true,
         scrollY: '75vh',
         scrollCollapse: true,
-        dom: 'PlBfritp',
-        // dom: 'P'+
-        // '<"fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix ui-corner-tl ui-corner-tr"lBfr>'+'t'+
-        // '<"fg-toolbar ui-toolbar ui-widget-header ui-helper-clearfix ui-corner-bl ui-corner-br"ip>',
+        dom: "P<'row'<'col-sm-4 col-md-auto'l><'col-sm-4 col-md-8'B><'col-sm-4 col-md-auto'f>>" +
+        'r'+ "<'row'<'col-sm-12't>>"+
+        "<'row'<'col-sm-12 col-md-4'i><'col-sm-12 col-md-8'p>>",
         processing: true,
         pagingType: "full_numbers",
         keys: true,
@@ -117,6 +111,15 @@ function initDataTable() {
             search: '',
             searchPlaceholder: 'Enter Search Query'
         },
+        // "drawCallback": function( settings ) {
+        //     alert( 'DataTables has redrawn the table' );
+        // },
+        // "rowCallback": function (row, data, index) {
+        //     var re = /^(.+)\\([^\\]+)$/;
+        //     if (re.test(data)) {
+        //         $('td:eq(2)', row).html('<a href="' + data[2] + '"target="_blank" download>' + data[2].substr(data[2].lastIndexOf('\\') + 1) + '</a>');
+        //     }
+        // },
         // responsive: true,
         deferRender: true,
         buttons: [
@@ -126,7 +129,7 @@ function initDataTable() {
             },
             {
                 extend: 'csv',
-                text: '<i class="fa-solid fa-file-csv fa-xl" />',
+                text: '<i class="fa-solid fa-file-csv fa-lg" />',
                 title: csvFileSelected.value.substr(folderSelected.value.length,
                     csvFileSelected.value.length - folderSelected.value.length - 4),
                 titleAttr: 'Download Data as CSV',

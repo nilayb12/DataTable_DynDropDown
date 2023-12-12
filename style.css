@@ -1,7 +1,10 @@
 body {
   text-align: center;
-  background-color: black;
-  color: white;
+}
+
+[data-bs-theme=dark] {
+  --bs-body-color: white !important;
+  --bs-body-bg: black !important;
 }
 
 #selectContainer {
@@ -11,7 +14,7 @@ body {
   /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-  height: 2.5em;
+  height: 3em;
   /* padding: 10px; */
   font-size: 15px;
   font-weight: bold;
@@ -37,13 +40,20 @@ body {
   box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background .2s ease-in-out, border .2s ease-in-out, color .2s ease-in-out;
+  /* option {
+    color: inherit;
+  } */
 }
+
+/* #selectFolder:hover, #selectFile:hover {
+  background: rgb(0, 69, 0);
+} */
 
 #selectButton {
   border: none;
   width: auto;
   background: blue;
-  padding: 7px 17px;
+  padding: 5px 15px;
   border-radius: 5px;
   color: white;
   font-weight: bold;
@@ -56,32 +66,35 @@ body {
 }
 
 tfoot input {
-  background-color: black;
-  color: white;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
   width: 100%;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
   padding: 3px;
-  border-radius: 5px;
-  box-sizing: border-box;
 }
 
-.dt-button-collection {
-  background-color: #212529 !important;
-}
-
-/* dataTables Search input box */
 .dataTables_filter {
-  position: relative;
-}
-
-.dataTables_filter input {
-  width: 100%;
-  background: black;
-  box-shadow: 0 0 3px #ffffff, 0 10px 15px #336633 inset;
+  position: absolute;
+  right: 0;
 }
 
 .fa-icon {
-  color: white;
+  color: var(--bs-body-color);
   position: absolute;
   top: 5px;
-  right: 0;
+  right: 5px;
+}
+
+.btn {
+  --bs-btn-bg: var(--bs-body-bg) !important;
+  --bs-btn-color: var(--bs-body-color) !important;
+}
+
+.dataTables_scrollHead {
+  background: #212529;
+}
+
+.pagination {
+  --bs-pagination-color: var(--bs-body-color) !important;
 }
