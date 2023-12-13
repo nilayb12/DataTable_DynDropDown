@@ -89,6 +89,16 @@ tfoot input {
 .btn {
   --bs-btn-bg: var(--bs-body-bg) !important;
   --bs-btn-color: var(--bs-body-color) !important;
+  --bs-btn-hover-color: var(--bs-body-color) !important;
+  --bs-btn-hover-bg: var(--bs-tertiary-bg) !important;
+}
+
+.form-select:hover {
+  background-color: var(--bs-tertiary-bg) !important;
+}
+
+.dropdown-menu {
+  --bs-dropdown-bg: var(--bs-tertiary-bg) !important;
 }
 
 .dataTables_scrollHead {
