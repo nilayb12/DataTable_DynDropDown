@@ -100,7 +100,7 @@ tfoot input:focus {
   --bs-btn-hover-bg: var(--bs-tertiary-bg) !important;
 }
 
-.form-select:hover {
+.form-select:focus {
   background-color: var(--bs-tertiary-bg) !important;
 }
 
