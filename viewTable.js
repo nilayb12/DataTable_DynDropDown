@@ -120,7 +120,7 @@ function initDataTable() {
         //         $('td:eq(2)', row).html('<a href="' + data[2] + '"target="_blank" download>' + data[2].substr(data[2].lastIndexOf('\\') + 1) + '</a>');
         //     }
         // },
-        // responsive: true,
+        responsive: true,
         deferRender: true,
         buttons: [
             {
