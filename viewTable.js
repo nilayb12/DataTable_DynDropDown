@@ -125,7 +125,7 @@ function initDataTable() {
         buttons: [
             {
                 extend: 'colvis',
-                // collectionTitle: 'Column Visibility Panel'
+                collectionTitle: 'Column Visibility Panel'
             },
             {
                 extend: 'csv',
@@ -154,6 +154,35 @@ function initDataTable() {
                 });
             $('#tableData_filter input')
                 .after('<span class="fa-icon" /><i class="fa-solid fa-magnifying-glass" />');
+            // table.columns().every( function (colIdx) {
+            //     var columnData = this.columns(colIdx).data().join('');
+            //     if (columnData.length < 1) {
+            //         this.column(colIdx).visible(false);
+            //     }
+            // });
+        },
+        colResize: {
+            isEnabled: true,
+            saveState: false,
+            hoverClass: 'dt-colresizable-hover',
+            hasBoundCheck: true,
+            minBoundClass: 'dt-colresizable-bound-min',
+            maxBoundClass: 'dt-colresizable-bound-max',
+            isResizable: function (column) {
+                return true;
+            },
+            onResizeStart: function (column, columns) {
+            },
+            onResize: function (column) {
+            },
+            onResizeEnd: function (column, columns) {
+            },
+            getMinWidthOf: function ($thNode) {
+            },
+            stateSaveCallback: function (settings, data) {
+            },
+            stateLoadCallback: function (settings) {
+            }
         },
         columnDefs: [
             {

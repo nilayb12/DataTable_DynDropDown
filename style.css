@@ -21,7 +21,6 @@ body {
   border-radius: 10px;
   border: 2px dashed #696969;
   color: green;
-  cursor: pointer;
   transition: background .2s ease-in-out, border .2s ease-in-out, color .2s ease-in-out;
 }
 
