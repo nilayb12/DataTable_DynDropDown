@@ -1,6 +1,6 @@
 <?php
 $data = @$_POST['fold'];
-echo '<select id="selectFile">';
+echo '<select class="form-select" id="selectFile">';
 // echo '<option selected disabled>Choose Data Source</option>';
 $files = glob('{' . $data . '}/*.csv', GLOB_BRACE);
 $flen = 1;

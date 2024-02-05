@@ -27,13 +27,13 @@
     <link href="https://cdn.datatables.net/searchpanes/2.2.0/css/searchPanes.bootstrap5.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/select/1.7.0/css/select.bootstrap5.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/staterestore/1.3.0/css/stateRestore.bootstrap5.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/datatables.net-colresize-unofficial@latest/jquery.dataTables.colResize.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/datatables.net-colresize-unofficial@latest/jquery.dataTables.colResize.css" rel="stylesheet"> -->
     <link rel="icon" href="table1.png">
 </head>
 
 <body>
     <label id="selectContainer" for="selectFolder">
-        <select id="selectFolder">
+        <select class="form-select" id="selectFolder">
             <option value="" selected>Index</option>
             <?php
             $folders = glob("Data/*", GLOB_ONLYDIR);
@@ -43,7 +43,7 @@
             ?>
         </select>
         <?php include('files.php'); ?>
-        <input type="submit" id="selectButton">
+        <button class="btn btn-primary" type="submit" id="selectButton">Submit</button>
     </label>
     <div id="csvTable">Select Data</div>
 
@@ -87,7 +87,7 @@
     <script src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
     <script src="https://cdn.datatables.net/staterestore/1.3.0/js/dataTables.stateRestore.min.js"></script>
     <script src="https://cdn.datatables.net/staterestore/1.3.0/js/stateRestore.bootstrap5.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/datatables.net-colresize-unofficial@latest/jquery.dataTables.colResize.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/datatables.net-colresize-unofficial@latest/jquery.dataTables.colResize.js"></script> -->
 </body>
 
 </html>
