@@ -85,12 +85,12 @@ tfoot input:focus {
   right: 0;
 }
 
-.fa-icon {
+/* .fa-icon {
   color: var(--bs-body-color);
   position: absolute;
   top: 5px;
   right: 5px;
-}
+} */
 
 .btn {
   --bs-btn-bg: var(--bs-body-bg) !important;

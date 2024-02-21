@@ -4,7 +4,7 @@ const folderSelected = document.getElementById('selectFolder');
         $.ajax({
             type: "POST",
             url: "files.php",
-            data: {fold: ev.target.value},
+            data: { fold: ev.target.value },
             success: function (data) {
                 $('#selectFile').html(data);
             }
@@ -97,8 +97,8 @@ function initDataTable() {
         scrollY: '75vh',
         scrollCollapse: true,
         dom: "P<'row'<'col-sm-4 col-md-auto'l><'col-sm-4 col-md-8'B><'col-sm-4 col-md-auto'f>>" +
-        'r'+ "<'row'<'col-sm-12't>>"+
-        "<'row'<'col-sm-12 col-md-4'i><'col-sm-12 col-md-8'p>>",
+            'r' + "<'row'<'col-sm-12't>>" +
+            "<'row'<'col-sm-12 col-md-4'i><'col-sm-12 col-md-8'p>>",
         processing: true,
         pagingType: "full_numbers",
         keys: true,
@@ -129,7 +129,7 @@ function initDataTable() {
             },
             {
                 extend: 'csv',
-                text: '<i class="fa-solid fa-file-csv fa-lg" />',
+                text: '<i class="bi bi-filetype-csv"></i>',
                 title: csvFileSelected.value.substr(folderSelected.value.length,
                     csvFileSelected.value.length - folderSelected.value.length - 4),
                 titleAttr: 'Download Data as CSV',
@@ -153,7 +153,7 @@ function initDataTable() {
                         });
                 });
             $('#tableData_filter input')
-                .after('<span class="fa-icon" /><i class="fa-solid fa-magnifying-glass" />');
+                .after('<i class="bi bi-search"></i>');
             // table.columns().every( function (colIdx) {
             //     var columnData = this.columns(colIdx).data().join('');
             //     if (columnData.length < 1) {
